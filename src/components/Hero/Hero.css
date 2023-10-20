@@ -1,0 +1,45 @@
+.leftitem{
+    position: relative;
+    border-radius: 20px;
+}
+.leftitem h3{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+.leftitem p{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 50px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.leftitem button{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 50px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+}
+.rightitem{
+    background-color: black;
+    padding: 0px;
+    border-radius: 20px;
+}
+.delivary{
+    background-color: beige;
+    padding: 0px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.offer{
+    position: absolute;
+    width: 50%;
+    margin-top: 200px;
+    margin-left: 70px;
+}
