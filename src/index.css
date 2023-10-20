@@ -18,3 +18,7 @@ body{
 ul,li{
     list-style: none;
 }
+
+.outlet{
+    height: calc(100vh - 130px);
+}

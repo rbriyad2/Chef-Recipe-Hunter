@@ -25,10 +25,10 @@ const Header = () => {
           </ul>
           
           <div className="logo flex-fill" style={{marginLeft: '270px'}}>
-            <img src={logo} alt="" />
+            <Link to='/'><img src={logo} alt="" /></Link>
           </div>
           <div className="userinfo flex-shrink-1">
-            <FaUserCircle className="fs-4 text-white"></FaUserCircle>
+            <Link to="/account"> <FaUserCircle className="fs-4 text-white"></FaUserCircle> </Link>
           </div>
         </div>
       </div>
