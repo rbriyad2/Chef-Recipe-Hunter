@@ -20,5 +20,205 @@ ul,li{
 }
 
 .outlet{
-    height: calc(100vh - 130px);
+    height: calc(100vh - 145px);
+}
+/* ======Header======= */
+.userinfo{
+    align-items: center;
+    gap: 10px;
+}
+.userinfo button{
+    border: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: all linear .3s;
+}
+.userinfo button:hover{
+    background-color: #f8f000;
+}
+.userinfo button a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ====Buttons==== */
+.glow-on-hover {
+    width: 180px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #e9dbfb;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: large;
+}
+
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #fefefe, #f8b57e, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #022125;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.googleAuth button{
+    color: #1403f9;
+    font-size: x-large;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* =======from======= */
+.register{
+    margin-top: 30px;
+}
+.from{
+    padding: 100px 100px;
+    background: #FC466B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 45%;
+    margin: 0 auto;
+    border-radius: 10px 10px 10px 10px;
+    height: 600px;
+}
+.from input{
+    border: none;
+    color: #000;
+    font-size: larger;
+    width: 85%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.forgetpass{
+    text-align: right;
+    margin-right: 30px;
+    transition: all linear .3s;
+}
+.forgetpass a{
+    color: #fff;
+    text-decoration: none;
+}
+.forgetpass a:hover{
+    color: #f8f000;
+}
+.from p{
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+}
+.googleAuth{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.googleAuth button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #fefefe;
+    padding: 15px;
+    border-radius: 50%;
+    transition: all linear .3s;
+}
+.googleAuth button img{
+    width: 25px;
+}
+.googleAuth button:hover{
+background-color: #D33545;
+}
+.dont-account{
+    font-size: 25px;
+    margin-top: 25px;
+}
+.dont-account a{
+    color: #fff;
+    text-decoration: none;
+}
+.dont-account a:hover{
+    color: #f8f000;
+}
+
+
+
+/* ======= color headline ======== */
+.gradianthead{
+    font-size: xx-large;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        to right,
+        #fbfbfb 20%,
+        #f0fc04 30%,
+        #04ffa7 70%,
+        #34fb02 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }

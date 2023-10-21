@@ -8,6 +8,7 @@ import Blogs from "../pages/Blogs";
 import Chef from "../pages/Home/Chef";
 import PrivateRoutes from "./PrivateRoutes";
 import Accounts from "../pages/Accounts";
+import Forget from "../pages/Forget";
 
   const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ import Accounts from "../pages/Accounts";
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path: '/forget',
+          element: <Forget></Forget>
         },
         {
           path: '/blogs',

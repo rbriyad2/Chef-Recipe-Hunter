@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="pt-2">
+    <div className="pt-2 position-fixed w-100 bottom-0">
       <div className="text-center text-light p-3 bg-danger">
         © 2023 Copyright 
         <Link to='/' className="text-light text-decoration-none"> ChefR.</Link>

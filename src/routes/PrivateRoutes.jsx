@@ -1,10 +1,9 @@
 import React from 'react';
+import Accounts from '../pages/Accounts';
 
 const PrivateRoutes = () => {
     return (
-        <div>
-            <h2>Acccounts</h2>
-        </div>
+        <Accounts></Accounts>
     );
 };
 

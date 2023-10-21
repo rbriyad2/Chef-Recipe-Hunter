@@ -9,7 +9,7 @@ const Header = () => {
     <div className="bg-danger">
       <div className="container">
         <div className="d-flex align-items-center">
-          <ul className="d-flex gap-3 mt-3 fs-5 text-decoration-none"> 
+          <ul className="d-flex gap-3 p-0 mt-3 fs-5 text-decoration-none"> 
             <li>
               <Link className="text-decoration-none text-light" to="/">Home</Link>
             </li>
@@ -29,6 +29,7 @@ const Header = () => {
           </div>
           <div className="userinfo flex-shrink-1">
             <Link to="/account"> <FaUserCircle className="fs-4 text-white"></FaUserCircle> </Link>
+            <button><Link to='/login'>Sign in</Link></button>
           </div>
         </div>
       </div>
