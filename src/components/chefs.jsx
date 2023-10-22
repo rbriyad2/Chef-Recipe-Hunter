@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const chefs = () => {
   return (
-    <div className="container">
+    <div className="chefs">
+      <div className="container">
       <div className="all-chefs mb-4">
         <div className="outline">
           <div className="chefinfo">
@@ -61,6 +62,7 @@ const chefs = () => {
         </div>
  
       </div>
+    </div>
     </div>
   );
 };
