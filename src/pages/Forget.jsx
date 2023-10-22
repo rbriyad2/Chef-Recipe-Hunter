@@ -1,6 +1,4 @@
 import React from "react";
-import google from '../assets/icons/icons8-google-48.png';
-import github from '../assets/icons/icons8-github-50.png';
 import { Link } from "react-router-dom";
 
 const Forget = () => {
@@ -16,8 +14,6 @@ const Forget = () => {
             </div>
             <p className="forgetpass"><Link to='/login'>Login Account?</Link></p>
             <button className="glow-on-hover">Reset</button>
-            
-            
           </form>
         </div>
       </div>

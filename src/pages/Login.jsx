@@ -5,24 +5,42 @@ import { Link } from "react-router-dom";
 import { Authcontext } from "../provider/AuthProvider";
 
 const Login = () => {
-const {signIn}= useContext(Authcontext)
+const {signIn, googleLogin, githubLogin}= useContext(Authcontext)
   const handleLogin =(event)=>{
     event.preventDefault()
     const email = event.target.email.value;
     const password = event.target.password.value;
+
     signIn(email, password)
     .then((userCredential) => {
-      // Signed in 
       const user = userCredential.user;
       console.log(user)
-      // ...
     })
     .catch((error) => {
-      const errorCode = error.code;
       const errorMessage = error.message;
     });
-  
   }
+//google login
+  const handlegoogleLogin=()=>{
+    googleLogin()
+    .then((result)=>{
+      console.log(result)
+    })
+    .catch((error)=>{
+      console.log(error.message)
+    })
+  }
+//github login
+  const handleGithubLogin=()=>{
+    githubLogin()
+    .then((result)=>{
+      console.log(result)
+    })
+    .catch((error)=>{
+      console.log(error.message)
+    })
+  }
+
     return (
       <div className="register">
       <div className="container">
@@ -41,8 +59,8 @@ const {signIn}= useContext(Authcontext)
             <button className="glow-on-hover">Login</button>
             <p>Or Login Using</p>
             <div className="googleAuth">
-            <button><img src={google} alt="" /></button>
-            <button><img src={github} alt="" /></button>
+            <button onClick={handlegoogleLogin} ><img src={google} alt="" /></button>
+            <button onClick={handleGithubLogin}><img src={github} alt="" /></button>
             </div>
             <p className="dont-account">Don't have account? <Link to='/register'>Create Account</Link></p>
           </form>

@@ -114,7 +114,31 @@ ul,li{
     align-items: center;
 }
 
+/* ===== View Recipe Button ===== */
+.viewrecipe{
+    background: #870000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 10px;
+transition: all linear .3s;
+margin-bottom: 5px;
+}
+.viewrecipe a{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all linear .3s;
+}
 
+.viewrecipe:hover{
+    background: #77A1D3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.viewrecipe:hover a{
+    color: #000;
+}
 
 /* =======from======= */
 .register{
@@ -222,3 +246,135 @@ background-color: #D33545;
         background-position: 100% 50%;
     }
 }
+
+
+/* ===== Accounts Pages ======= */
+.bginfopadding{
+    padding: 130px;
+    background-color: #9bf9a4bd;
+}
+.userpicture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #022125;
+    position: absolute;
+    margin-top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+}
+.userpicture img{
+    width: 100%;
+}
+.usercard{
+    width: 50%;
+    height: 60%;
+    padding: 100px 100px;
+    background-color: #e9dbfb;
+    margin: -100px auto;
+    border-radius: 15px;
+}
+.userinfo h3{
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.userinfo p{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ==== Chef Info ===== */
+.outline{
+    border: 4px solid #08203e ;
+        padding: 30px;
+        background: #7b4397;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #08203e, #557c93);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #08203e, #557c93); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        margin-bottom: 198px;
+        height: 366px;
+        border-radius: 20px;
+        transition: all linear .3s;
+}
+.outline:hover{
+    background: -webkit-linear-gradient(to right, #0a1647, #436c89);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0a1647, #436c89); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.all-chefs{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.chefinfo{
+    background: #7b4397;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+transition: all linear .3s;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 200px;
+    box-shadow: 10px 10px 19px -2px rgba(0,0,0,0.72);
+-webkit-box-shadow: 10px 10px 19px -2px rgba(0,0,0,0.72);
+-moz-box-shadow: 10px 10px 19px -2px rgba(0,0,0,0.72);
+}
+.chefinfo img{
+    width: 100px;
+    height: 110px;
+    border-radius: 10%;
+    box-shadow: 24px 22px 5px 0px rgba(0,0,0,0.1);
+}
+.chefinfo h4{
+    font-weight: 500;
+    font-size: xx-large;
+    margin-top: 10px;
+}
+.outline:hover .chefinfo img{
+    zoom: 110%;
+    position: static;
+}
+.outline:hover .chefinfo{
+    background: #512865;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #750f16, #4a275c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8d161e, #4b285d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.outline:hover .chefname{
+    background: #666f88;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ab6666, #3b4664);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #bd8b8b, #525f82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.chefname p{
+    font-weight: 400;
+    font-size: medium;
+    margin-top: 15px;
+}
+.chefname{
+    transition: all linear .3s;
+    background: #DAE2F8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+transition: all linear .3s;
+    border-radius: 0px 20px 0px 20px;
+    margin-top: 10px;
+    padding: 10px;
+    transform: rotateY(10px);
+    box-shadow: 15px 12px 32px -2px rgba(0,0,0,0.72);
+-webkit-box-shadow: 15px 12px 32px -2px rgba(0,0,0,0.72);
+-moz-box-shadow: 15px 12px 32px -2px rgba(0,0,0,0.72);
+}
+.chefname:hover{
+    box-shadow: 13px 14px 7px 0px rgba(0,0,0,0.1);
+}
+.chefname button{
+    border: transparent;
+    padding: 5px 5px;
+}
+
