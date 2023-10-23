@@ -6,7 +6,8 @@
       "name": "Harmon Wright",
       "recipes": "Chiners",
       "Fooditems": ["Fryedrice", "Burger", "Snacks","Cold Coffe","Chiken Ball"],
-      "Likes": "500"
+      "Likes": "500",
+      "Recipe": ["Chines", "Maxican", "Endonesian", "American"]
     },
     {
         "_id": "661988ed23d311d253a3dfe7",
