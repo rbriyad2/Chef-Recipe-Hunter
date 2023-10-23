@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
 import google from "../assets/icons/icons8-google-48.png";
 import github from "../assets/icons/icons8-github-50.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../provider/AuthProvider";
 
 const Register = () => {
-  const {createUser, user} = useContext(Authcontext)
+  const {createUser} = useContext(Authcontext)
+
+  const navigate = useNavigate()
+const location = useLocation()
+
+const from =location.state?.from?.pathname || '/';
+
   const handleRegister = (event)=>{
     event.preventDefault()
     const email = event.target.email.value;
@@ -15,7 +21,7 @@ const Register = () => {
     .then((userCredential) => {
       // Signed up 
       const user = userCredential.user;
-      setUser(user)
+      navigate(from, {replace: true})
       console.log(user)
       // ...
     })

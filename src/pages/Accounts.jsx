@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Authcontext } from "../provider/AuthProvider";
 
-const Accounts = (children) => {
+const Accounts = () => {
   const { user } = useContext(Authcontext);
   return (
     <section>

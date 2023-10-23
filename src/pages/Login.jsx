@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
 import google from '../assets/icons/icons8-google-48.png';
 import github from '../assets/icons/icons8-github-50.png';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../provider/AuthProvider";
+
 
 const Login = () => {
 const {signIn, googleLogin, githubLogin}= useContext(Authcontext)
+const navigate = useNavigate()
+const location = useLocation()
+
+const from =location.state?.from?.pathname || '/';
+
   const handleLogin =(event)=>{
     event.preventDefault()
     const email = event.target.email.value;
@@ -14,7 +20,8 @@ const {signIn, googleLogin, githubLogin}= useContext(Authcontext)
     signIn(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log(user)
+
+      navigate(from, {replace: true})
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -25,6 +32,7 @@ const {signIn, googleLogin, githubLogin}= useContext(Authcontext)
     googleLogin()
     .then((result)=>{
       console.log(result)
+      navigate(from, {replace: true})
     })
     .catch((error)=>{
       console.log(error.message)
@@ -35,6 +43,7 @@ const {signIn, googleLogin, githubLogin}= useContext(Authcontext)
     githubLogin()
     .then((result)=>{
       console.log(result)
+      navigate(from, {replace: true})
     })
     .catch((error)=>{
       console.log(error.message)
