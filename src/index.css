@@ -226,8 +226,8 @@ background-color: #D33545;
     margin-bottom: 20px;
     background: linear-gradient(
         to right,
-        #fbfbfb 20%,
-        #f0fc04 30%,
+        #f40303 30%,
+        #f0fc04 40%,
         #04ffa7 70%,
         #34fb02 80%
     );
@@ -504,4 +504,8 @@ border-radius: 10px;
   .blogs{
     margin-top: 40px;
     margin-bottom: 400px;
+  }
+  .allchefs h2{
+    margin-top: 20px;
+    text-align: center;
   }

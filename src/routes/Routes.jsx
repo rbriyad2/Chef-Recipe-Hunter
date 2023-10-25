@@ -10,6 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Accounts from "../pages/Accounts";
 import Forget from "../pages/Forget";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Recipes from "../pages/Recipes/Recipes";
 
   const router = createBrowserRouter([
     {
@@ -44,11 +45,17 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
         },
         {
           path: '/chefs',
-          element: <Chef></Chef>
+          element: <Chef></Chef>,
+          loader: ()=> fetch('http://localhost:3000/chefs')
         },
         {
           path: '/account',
           element: <PrivateRoutes> <Accounts></Accounts></PrivateRoutes>
+        },
+        {
+          path: '/recipe',
+          element: <Recipes></Recipes>,
+          loader: ()=> fetch('http://localhost:3000/chefs')
         }
       ]
     },
