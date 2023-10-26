@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import google from '../assets/icons/icons8-google-48.png';
 import github from '../assets/icons/icons8-github-50.png';
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import { Authcontext } from "../provider/AuthProvider";
 
 
 const Login = () => {
+  const [error, SetError]= useState('')
 const {signIn, googleLogin, githubLogin}= useContext(Authcontext)
 const navigate = useNavigate()
 const location = useLocation()
@@ -20,11 +21,12 @@ const from =location.state?.from?.pathname || '/';
     signIn(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-
+      SetError('')
       navigate(from, {replace: true})
     })
     .catch((error) => {
       const errorMessage = error.message;
+      SetError(error.message)
     });
   }
 //google login
@@ -64,6 +66,7 @@ const from =location.state?.from?.pathname || '/';
               <label htmlFor="password"></label>
               <input placeholder="Password" type="password" name="password" />
             </div>
+            <p>{error ? error : ''}</p>
             <p className="forgetpass"><Link to='/forget'>Forget Password?</Link></p>
             <button className="glow-on-hover">Login</button>
             <p>Or Login Using</p>

@@ -1,0 +1,37 @@
+Make sure your design is unique.  = Done
+Give your website a name.         = Done
+Your website should have a navbar = Done
+Website name Home Blog and User   = Done
+profile picture.user profile pic
+reasonable and meaningful footer  = Done
+Email/Password, Google Sign-in,
+GitHub Sign-in redirect to the registration = Done
+Chef section Chef Picture
+
+Chef Name, Years of experience, Numbers of 
+recipes, Likes, View Recipes, Button        =Done
+Create a 404 page                           = Done
+nvironment variable to hide the Firebase config keys.= Done
+The Chef Recipe page will be a private/protected page =Done
+Reg page Name, Photo URL, Confirm Pass, Eye icon, Error Page,= Done
+When clicking the Favorite button, show a toast message = Done
+
+Add at least two extra sections
+View Recipes Pages
+Like Youtube Banner: Banner 
+active route Create a readme for client-side and write about your project (at least 5 bullet points)
+Make your website home page mobile & desktop responsive (tablet responsive is optional)
+
+Create a blogs page route where you will have to answer the following questions
+Tell us the differences between uncontrolled and controlled components.
+
+How to validate React props using PropTypes
+Tell us the difference between nodejs and express js.
+What is a custom hook, and why will you create a custom hook?
+
+
+
+
+
+
+

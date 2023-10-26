@@ -15,8 +15,9 @@ import Recipes from "../pages/Recipes/Recipes";
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Main></Main>,
-      errorElement: <ErrorPage></ErrorPage>,
+      element: <Main></Main>
+      // ,errorElement: <ErrorPage></ErrorPage>
+      ,
       children:[
         {
             path: '/',
@@ -44,18 +45,18 @@ import Recipes from "../pages/Recipes/Recipes";
           element: <Contact></Contact>
         },
         {
+          path: '/account',
+          element: <PrivateRoutes> <Accounts></Accounts></PrivateRoutes>
+        },
+        {
           path: '/chefs',
           element: <Chef></Chef>,
           loader: ()=> fetch('http://localhost:3000/chefs')
         },
         {
-          path: '/account',
-          element: <PrivateRoutes> <Accounts></Accounts></PrivateRoutes>
-        },
-        {
-          path: '/recipe',
+          path: '/recipe/:id',
           element: <Recipes></Recipes>,
-          loader: ()=> fetch('http://localhost:3000/chefs')
+          loader: ({params})=> fetch(`http://localhost:3000/chefs/${params.id}`)
         }
       ]
     },

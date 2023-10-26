@@ -1,21 +1,16 @@
 import React from 'react';
-import './Recipes.css';
-import { Link, useLoaderData } from 'react-router-dom';
-import ChefBanner from '../ChefBanner/ChefBanner';
 
-const Recipes = () => {
-    const chefreBanner= useLoaderData()
-    const {Exxprience, Fooditems, Likes, Recipe, foodImage, name, picture, recipes, _id}=chefreBanner
-    console.log(chefreBanner)
+const ChefBanner = ({recipedetails}) => {
+const {Exxprience, Fooditems, Likes, Recipe, foodImage, name, picture, recipes, _id}=recipedetails
     return (
-        <section>
+        <div>
             <div className="chefProfile">
                     <div className="container">
                         <div className="bannercontent">
-                            <img src={picture} alt="" />
+                            <img src={foodImage} alt="" />
                             <div className="chef-infocontent">
                                 <h3>Name: {name}</h3>
-                                <h4>Exprience: {Exxprience}</h4>
+                                <h4>Exprience: </h4>
                                 <h5>Total Recipe: </h5>
                                 <h6>Favorite:</h6>
                             </div>
@@ -41,9 +36,8 @@ const Recipes = () => {
                 
                 </div>
             </div>
-                
-        </section>
+        </div>
     );
 };
 
-export default Recipes;
+export default ChefBanner;
